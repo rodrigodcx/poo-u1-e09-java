@@ -4,7 +4,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 import org.junit.jupiter.api.Test;
 
-public class TestCupomFiscal {
+public class TestLoja {
 
 	private String BREAK = System.lineSeparator();
 
@@ -238,7 +238,7 @@ public class TestCupomFiscal {
 	private void rodarTestarRetorno(String expected, Loja loja) {
 
 		// action
-		String retorno = CupomFiscal.dadosLojaObjeto(loja);
+		String retorno = loja.dadosLoja();
 
 		// assertion
 		assertEquals(expected, retorno);
@@ -246,7 +246,7 @@ public class TestCupomFiscal {
 
 	private void verificarCampoObrigatorio(String mensagemEsperada, Loja loja) {
 		try {
-			CupomFiscal.dadosLojaObjeto(loja);
+			loja.dadosLoja();
 		} catch (RuntimeException e) {
 			assertEquals(mensagemEsperada, e.getMessage());
 		}

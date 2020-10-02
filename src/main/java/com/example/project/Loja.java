@@ -79,4 +79,9 @@ public class Loja {
         return this.inscricaoEstadual;
     }
 
+    public String dadosLojaObjeto(Loja loja) {
+		// Implemente aqui
+		return null;
+	}
+
 }
